@@ -175,6 +175,46 @@ public class Empresa {
         return total;
     }
 
+    public List<Empleado> obtenerEmpleadosMayorSalarioA(float salarioMinimo) {
+        List<Empleado> resultado = new ArrayList<>();
+
+        for (Empleado e : ListaEmpleados) {
+            if (e.calcularSalarioNeto() > salarioMinimo) {
+                resultado.add(e);
+            }
+        }
+
+        return resultado;
+    }
+
+    public float obtenerEltotalDelSalarioDePlanta (){
+        float total = 0;
+
+        for (Empleado e : ListaEmpleados) {
+            if (e instanceof EmpleadoPlanta) {
+                total += e.calcularSalarioNeto();
+            }
+        }
+
+        return total;
+    }
+
+    public List<EmpleadoTemporal> obtenerTemporalesMasDe100Dias() {
+        List<EmpleadoTemporal> resultado = new ArrayList<>();
+
+        for (Empleado e : ListaEmpleados) {
+            if (e instanceof EmpleadoTemporal) {
+                EmpleadoTemporal temp = (EmpleadoTemporal) e;
+
+                if (temp.getDiasTrabajados() > 100) {
+                    resultado.add(temp);
+                }
+            }
+        }
+
+        return resultado;
+    }
+
 }
 
 
