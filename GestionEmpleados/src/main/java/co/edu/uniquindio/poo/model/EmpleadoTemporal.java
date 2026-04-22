@@ -23,10 +23,6 @@ public class EmpleadoTemporal extends Empleado {
         this.valorDia = valorDia;
     }
 
-    public EmpleadoTemporal(int diasTrabajados, float valorDia) {
-        this.diasTrabajados = diasTrabajados;
-        this.valorDia = valorDia;
-    }
 
     //SETS Y GETS
 

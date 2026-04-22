@@ -206,7 +206,7 @@ public class Empresa {
             if (e instanceof EmpleadoTemporal) {
                 EmpleadoTemporal temp = (EmpleadoTemporal) e;
 
-                if (temp.getDiasTrabajados() > 100) {
+                if (temp.getDiasTrabajados() * 8 > 100) {
                     resultado.add(temp);
                 }
             }
